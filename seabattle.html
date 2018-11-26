@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Игра Морской бой</title>
+<link href="fonts/SegoePrint/fonts.css" rel="stylesheet">
+<link href="seabattle.style.css" rel="stylesheet">
+</head>
+
+<body>
+<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter45744036 = new Ya.Metrika({ id:45744036, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/45744036" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+<!--LiveInternet counter--><script type="text/javascript">
+new Image().src = "//counter.yadro.ru/hit?r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";h"+escape(document.title.substring(0,80))+
+";"+Math.random();</script><!--/LiveInternet-->
+<div id="matrix" style="position: fixed; left:20px; top:50px;"></div>
+<div class="wrap">
+	<div class="battlefield">
+		<div id="text_top" class="text-top">Расстановка кораблей</div>
+		<div class="outer clearfix">
+			<!-- playing field user -->
+			<div class="field field-user">
+				<div id="field_user" class="ships"></div>
+			</div>
+			<!-- /playing field user -->
+
+			<!-- playing field comp -->
+			<div class="field field-comp" data-hidden="true">
+				<div id="field_comp" class="ships"></div>
+			</div>
+			<!-- /playing field comp -->
+
+			<!-- instruction -->
+			<div id="instruction" class="instruction" data-hidden="false">
+				<div id="type_placement" class="type-placement-box">
+					1. <span class="link" data-target="random">Случайным образом</span><br>
+					2. <span class="link" data-target="manually">Самостоятельно с чистого листа.</span>
+				</div>
+				<div id="ships_collection" class="ships-collection" data-hidden="true">
+					<p>Перетащите мышкой корабли на игровое поле. Для установки корабля по вертикали, кликните по нему правой кнопкой мышки.</p>
+					<ul id='initial_ships' class="initial-ships">
+						<li>
+							<div id="fourdeck1" class="ship fourdeck"></div>
+							<div id="tripledeck1" class="ship tripledeck tripledeck1"></div>
+							<div id="tripledeck2" class="ship tripledeck tripledeck2"></div>
+						</li>
+						<li>
+							<div id="doubledeck1" class="ship doubledeck"></div>
+							<div id="doubledeck2" class="ship doubledeck doubledeck2"></div>
+							<div id="doubledeck3" class="ship doubledeck doubledeck3"></div>
+						</li>
+						<li>
+							<div id="singledeck1" class="ship singledeck"></div>
+							<div id="singledeck2" class="ship singledeck singledeck2"></div>
+							<div id="singledeck3" class="ship singledeck singledeck3"></div>
+							<div id="singledeck4" class="ship singledeck singledeck4"></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- /instruction -->
+		</div>
+		<span id="play" class="btn-play" data-hidden="true">Играть</span>
+		<div id="text_btm" class="text-btm"></div>
+	</div>
+</div>
+
+<script src="seabattle.function.js"></script>
+<!--LiveInternet logo--><a style="position:absolute; left:-9999px;" href="//www.liveinternet.ru/click"
+target="_blank"><img src="//counter.yadro.ru/logo?16.6"
+title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня"
+alt="" border="0" width="88" height="31"/></a><!--/LiveInternet-->
+</body>
+</html>
