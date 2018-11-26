@@ -1,4 +1,4 @@
-window.onload = function() {
+﻿window.onload = function() {
 	/* variables
 	shipSide	- размер палубы
 	user.field 	- игровое поле пользователя
@@ -36,25 +36,6 @@ window.onload = function() {
 		this.squadron	= [];
 	}
 
-	Field.prototype.randomLocationShips = function() {
-		this.matrix = createMatrix();
-
-		for (var i = 1, length = this.shipsData.length; i < length; i++) {
-			// i == кол-во кораблей
-			var decks = this.shipsData[i][0]; // кол-во палуб
-			for (var j = 0; j < i; j++) {
-				// получаем координаты первой палубы и направление расположения палуб (корабля)
-				var fc = this.getCoordinatesDecks(decks);
-
-				fc.decks 	= decks,
-				fc.shipname	= this.shipsData[i][1] + String(j + 1);
-
-				// создаём экземпляр корабля и выводим на экран
-				var ship = new Ships(this, fc);
-					ship.createShip();
-			}
-		}
-	}
 
 	Field.prototype.getCoordinatesDecks = function(decks) {
 		// kx == 1 - вертикально, ky == 1 - горизонтально
@@ -82,6 +63,27 @@ window.onload = function() {
 		};
 		return obj;
 	}
+
+	Field.prototype.randomLocationShips = function() {
+		this.matrix = createMatrix();
+
+		for (var i = 1, length = this.shipsData.length; i < length; i++) {
+			// i == кол-во кораблей
+			var decks = this.shipsData[i][0]; // кол-во палуб
+			for (var j = 0; j < i; j++) {
+				// получаем координаты первой палубы и направление расположения палуб (корабля)
+				var fc = this.getCoordinatesDecks(decks);
+
+				fc.decks 	= decks,
+				fc.shipname	= this.shipsData[i][1] + String(j + 1);
+
+				// создаём экземпляр корабля и выводим на экран
+				var ship = new Ships(this, fc);
+					ship.createShip();
+			}
+		}
+	}
+
 
 	Field.prototype.checkLocationShip = function(x, y, kx, ky, decks) {
 		var fromX, toX, fromY, toY;

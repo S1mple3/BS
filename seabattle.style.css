@@ -5,6 +5,15 @@ a, button, div {outline: none;}
 ul {list-style: none; display: block;}
 img {border: none;}
 
+/* buttons */
+.btn-play {width: 144px; height: 45px; display: block; font-size: 24px; line-height: 40px; text-align: center; margin: 0 auto; background-position: 0 -150px; cursor: pointer;}
+
+/* left, right, position, clearfix */
+.text-center {text-align: center;}
+.clearfix:before, .clearfix:after {display:table; content:'';}
+.clearfix:after {clear:both;}
+
+
 /* grid */
 html, body, .wrap {height: 100%;}
 .wrap {width: 1024px; margin: 0 auto; padding: 20px 0;}
@@ -15,13 +24,6 @@ html, body, .wrap {height: 100%;}
 body {font: normal 18px SegoePrint; line-height: 24px; color: #4530af;}
 p {margin-bottom: 10px;}
 
-/* buttons */
-.btn-play {width: 144px; height: 45px; display: block; font-size: 24px; line-height: 40px; text-align: center; margin: 0 auto; background-position: 0 -150px; cursor: pointer;}
-
-/* left, right, position, clearfix */
-.text-center {text-align: center;}
-.clearfix:before, .clearfix:after {display:table; content:'';}
-.clearfix:after {clear:both;}
 
 /* display */
 [data-hidden="true"] {display:none;}

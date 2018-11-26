@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 Hello world!
+=======
+World
+>>>>>>> lab3.2
