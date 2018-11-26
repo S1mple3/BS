@@ -1,0 +1,13 @@
+{
+    "manifest_version": 2,
+    "name": "Калькулятор",
+    "description": "Просто калькулятор",
+    "version": "1.0",
+    "browser_action": {      
+        "default_popup": "seabattle.html"
+    },
+
+	"icons": { "16": "BS.png",
+               "48": "BS.png",
+               "128": "BS.png" }	   
+}
